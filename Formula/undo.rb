@@ -5,13 +5,13 @@
 class Undo < Formula
   desc "Undo what the last shell command did to the filesystem"
   homepage "https://github.com/edaywalid/undo"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/edaywalid/undo/releases/download/v0.2.0/undo_0.2.0_linux_amd64.tar.gz"
-    sha256 "f77fc19e4ac660d92fbba177f1ffd794152bb293c38d9ac16c2da4aa1ec0de61"
+    url "https://github.com/edaywalid/undo/releases/download/v0.2.1/undo_0.2.1_linux_amd64.tar.gz"
+    sha256 "050c8624ecf9198c1ff34f2bd6c4119d7ee8c9cec466b330538817533474c04f"
     define_method(:install) do
       bin.install "undo"
       arch = Hardware::CPU.arm? ? "arm64" : "amd64"
@@ -23,8 +23,8 @@ class Undo < Formula
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/edaywalid/undo/releases/download/v0.2.0/undo_0.2.0_linux_arm64.tar.gz"
-    sha256 "77c8707b1c061169c109cbdb4547f6c2a85f85af1ca97a7897a397bafbb6e16e"
+    url "https://github.com/edaywalid/undo/releases/download/v0.2.1/undo_0.2.1_linux_arm64.tar.gz"
+    sha256 "213a82985d3c90e21482dcae666f479750e6935fde0885c7c0f1988f57694002"
     define_method(:install) do
       bin.install "undo"
       arch = Hardware::CPU.arm? ? "arm64" : "amd64"
