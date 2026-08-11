@@ -11,7 +11,7 @@ class Undo < Formula
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
     url "https://github.com/edaywalid/undo/releases/download/v0.3.0/undo_0.3.0_linux_amd64.tar.gz"
-    sha256 "7116511802751ff685a6526f3323150031c8ebcafd06c30a76befd0cd244726f"
+    sha256 "78e19c58a75241880eff38832dd3f0a63c346d10e6e7a9fdf4f82cdca585476d"
     define_method(:install) do
       bin.install "undo"
       arch = Hardware::CPU.arm? ? "arm64" : "amd64"
@@ -24,7 +24,7 @@ class Undo < Formula
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/edaywalid/undo/releases/download/v0.3.0/undo_0.3.0_linux_arm64.tar.gz"
-    sha256 "89d9518d3bd52f3083c4404771fcdad8458dfa3d92c4e0e6e96848d62f83000d"
+    sha256 "902f345c86d38d3ec63d0b84fbb7ff191ddbcecdec08b48e4bcf0c14b197c62b"
     define_method(:install) do
       bin.install "undo"
       arch = Hardware::CPU.arm? ? "arm64" : "amd64"
